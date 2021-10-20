@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Qahiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rampart+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("./bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.navbar{
+  background-color: skyblue;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.navbar > h1{
+  font-size: 64px;
+  font-family: 'Italianno';
+}
+
+.sidenav{
+  background-color: skyblue;
+  width: 300px;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideButtonDiv{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  width: 80%;
+  margin-bottom: 50px;
+  max-height: 40px;
+  border-bottom: 2px solid white;
+}
+
+.sidebutton{
+  width: 100%;
+  font-family: 'Rampart One';
+  font-size: 23px;
+  border:none;
+  background-color: transparent;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.fa-arrow-right{
+  float: right;
+  margin-right: 15px;
+}
+
+.content{
+  float: right;
+  margin-left: 300px;
+  position: absolute;
+  width: calc(100vw - 300px);
+  display: inline-block;
+  height: calc(100vh - 90px);
+  
+}
+
+.fa-plus{
+  font-size: 30px;
+  color: white;
+}
+
+.addingNewProject{
+  height: 150px;
+  width: 80%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  transition: all .5;
+  border-radius: 8px;
+  -webkit-animation: fadein 2s;
+}
+.addingNewProject > *{
+  width: 80%;
+}
+
+.add{
+  height: 50px;
+  width: 50px;
+  background-color: skyblue;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 4;
+}
+
+
+.newEvent{
+  height: 350px;
+  width: 300px;
+  position: fixed;
+  right: 42px;
+  border-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  top: 48.3%;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.closeAdd{
+  float: right;
+  display: inline-block;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+}
+.fa-times-circle{
+  font-size: 25px;
+  outline: none;
+  color: red;
+  border: none;
+}
+
+#eventInput{
+  margin-top: 100px;
+}
+#eventInput, #eventDate, #eventButton{
+  display: block;
+  margin-top: 50px;
+  width: 60%;
+  height: 30px;
+  border-radius: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  border: .5px solid black;
+}
+#eventButton{
+  background-color: skyblue;
+  color:white;
+  border: none;
+}
+
+
+.newEventHidden{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.display{
+  height: calc(100vh - 190px);
+  width: 60%;
+  background-color: rgba(255, 255, 255, .7);
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.todayEvents, .upcomingEvents{
+  height: 240px;
+  width: 100%;
+}
+.todayEventHead, .upcomingEventHead{
+  width: 100%;
+  display: flex;
+  font-size: 25px;
+  font-family: 'Lobster';
+  color: skyblue;
+  align-items: center;
+  height: 20%;
+  border-bottom: 3px solid skyblue;
+}
+.todayEventBody, .upcomingEventBody{
+  max-height: 180px;
+  overflow: auto;  
+}
+.todayEventBody::-webkit-scrollbar {
+  width: 16px;
+}
+.upcomingEventBody::-webkit-scrollbar {
+  width: 16px;
+}
+.todayEventBody::-webkit-scrollbar-thumb {
+  background-color: #87ceeb;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+.upcomingEventBody::-webkit-scrollbar-thumb {
+  background-color: #87ceeb;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+#todaylist, #upcominglist{
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.myDiv{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.myDiv > *{
+  margin-bottom: 10px;
+}
+
+.deleteItemButton{
+  background-color: transparent;
+  border: none;
+}
+.fa-trash-alt{
+  color: red;
+}
+
+
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
